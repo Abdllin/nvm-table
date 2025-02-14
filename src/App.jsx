@@ -7,7 +7,7 @@ function App() {
     async function getData() {
       const meta = await fetch("https://dummyjson.com/users");
       const response = await meta.json();
-      setPerson(response);
+      setPerson(response.users);
     }
     getData();
   }, []);
